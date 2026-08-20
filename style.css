@@ -1,0 +1,357 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f1217;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ==========================================
+   SINGLE CONTINUOUS CARD CONTAINER
+========================================== */
+.card-container {
+  width: 600px;
+  /* Seamless container height holding both sections */
+  min-height: 200px; 
+  
+  /* --- BACKGROUND IMAGE & COLORS --- */
+  background-color: #1a1e24;
+  background-image: url('bionote/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2), 0 0 50px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  padding-bottom: 60px;
+}
+
+/* ==========================================
+   PART 1: ORIGINAL TOP SECTION
+========================================== */
+.top-section {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 1000px;
+}
+
+/* LEFT SECTION */
+.left-section {
+  width: 52%;
+  padding: 30px 20px 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tilted Dark Banner */
+.banner {
+  background-color: #65b6e9;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-transform: uppercase;
+  padding: 20px 18px;
+  transform: rotate(357deg);
+  width: 250%;
+  margin-left: -35px;
+  margin-top: 20px;
+  margin-bottom: -100px;
+  box-shadow: 3px 5px 12px rgba(248, 248, 248, 0.3);
+  letter-spacing: 2px;
+  z-index: 1;
+}
+
+/* Serif Title */
+.main-title {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 3rem;
+  color: #ffffff;
+  line-height: 0.7;
+  margin: 500px 5px 20px 35px;
+  transform: rotate(357deg);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.main-title first {
+  font-size: 6rem;
+  margin-left: 85px;
+  margin-top: 2px;
+  font-family: 'Cinzel Decorative', serif;
+  text-shadow: 10px -3px 4px rgba(57, 192, 255, 0.4);
+  color: #ffffff;
+  z-index: 2;
+}
+
+.main-title last {
+  font-size: 5rem;
+  margin-left: -20px;
+  color: #ffffff;
+}
+
+/* RIGHT SECTION (Photo) */
+.right-section {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: left;
+  justify-content: right;
+  margin-top: 30px;
+  margin-left: -95px;
+}
+
+.main-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  z-index: 1;
+  filter: drop-shadow(-5px 5px 10px rgba(94, 139, 236, 0.4));
+}
+
+/* Section Separator */
+.section-divider {
+  width: 85%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(101, 182, 233, 0.6), transparent);
+  margin: 40px auto 20px auto;
+  margin-top: -150px;
+}
+
+
+/* ==========================================
+   PART 2: COLOR-MATCHED "ABOUT ME" SECTION
+========================================== */
+.grunge-section {
+  width: 100%;
+  min-height: 1000px;
+  position: relative;
+  padding: 30px;
+  color: #ffffff;
+}
+
+/* Top Bar */
+.grunge-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 800;
+  font-size: 0.95rem;
+  z-index: 3;
+  position: relative;
+  color: #65b6e9;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.socials a {
+  color: #f0f1de;
+  font-size: 1.3rem;
+}
+
+/* Scribble Vectors */
+.scribble {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.4;
+}
+
+.scribble-top {
+  top: 60px;
+  right: -20px;
+  width: 320px;
+}
+
+.scribble-bottom {
+  bottom: 40px;
+  right: 20px;
+  width: 300px;
+  transform: rotate(-15deg);
+}
+
+/* Title Header & Paragraph */
+.grunge-header-content {
+  width: 55%;
+  margin-top: 30px;
+  position: relative;
+  z-index: 4;
+}
+
+.tape-badge {
+  position: relative;
+  display: inline-block;
+}
+
+.tape-badge::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -15px;
+  width: 150px;
+  height: 35px;
+  background: rgba(101, 182, 233, 0.25);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transform: rotate(-4deg);
+  border-left: 2px dashed rgba(255,255,255,0.2);
+  border-right: 2px dashed rgba(255,255,255,0.2);
+}
+
+.about-title {
+  font-size: 4.8rem;
+  font-weight: 900;
+  line-height: 0.82;
+  letter-spacing: -2px;
+  color: #ffffff;
+  text-transform: lowercase;
+  text-shadow: 0 0 15px rgba(57, 192, 255, 0.4);
+}
+
+.my-works {
+  font-size: 2rem;
+  font-weight: 100;
+  line-height: 1.5;
+  letter-spacing: -2px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.grunge-bio {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #d1d5db;
+  text-align: left;
+  background: rgba(26, 30, 36, 0.6);
+  padding: 15px;
+  border-radius: 4px;
+  border-left: 3px solid #65b6e9;
+  backdrop-filter: blur(4px);
+}
+
+/* Photo Collage (Left Side) */
+.photo-collage {
+  width: 58%;
+  margin-top: 35px;
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.photo-card {
+  position: relative;
+  background: #1a1e24;
+  padding: 6px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(101, 182, 233, 0.3);
+}
+
+.photo-frame {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(110%);
+}
+
+.card-top-left {
+  height: 180px;
+}
+
+.card-top-right {
+  height: 180px;
+  margin-top: 15px;
+  object-fit: contain;
+  background-size: contain; 
+}
+
+.card-bottom {
+  height: 190px;
+  margin-top: 10px;
+  object-fit: contain;
+  background-size: contain; 
+}
+
+/* Tape Accent Effects */
+.tape-strip {
+  position: absolute;
+  background: rgba(101, 182, 233, 0.4);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  z-index: 5;
+}
+
+.tape-top {
+  top: -10px;
+  left: 30%;
+  width: 60px;
+  height: 20px;
+  transform: rotate(-2deg);
+}
+
+
+/* Right Full-Body Cutout with Electric Blue Glows */
+.right-full-body {
+  position: absolute;
+  right: -30px;
+  bottom: 370px;
+  width: 350px;
+  height: 750px;
+  z-index: 5;
+}
+
+.fullbody-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 3;
+    filter: drop-shadow( 0px 5px 10px rgba(255, 253, 253, 0.4));
+}
+
+/* Double Glow Shadow Matching Top Header */
+.neon-outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.cyan-outline {
+  z-index: 2;
+  transform: translate(-10px, -6px);
+  filter: drop-shadow(0 0 8px #39c0ff);
+  opacity: 0.8;
+}
+
+.dark-blue-outline {
+  z-index: 1;
+  transform: translate(-16px, 10px);
+  filter: drop-shadow(0 0 12px #65b6e9);
+  opacity: 0.8;
+}
